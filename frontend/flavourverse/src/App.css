@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes full height of the screen */
+  width: 100%;
+  position: relative;
+}
+html,
+body {
+  background-color: #fffcf5; /* Soft cream */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 8% 50px 8%;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 85vh;
+}
+.left {
+  flex: 1;
+  padding-right: 50px;
+}
+.left h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #2d2d2d;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.left h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.left button {
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #ff6b35; /* Spicy Orange */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.left button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.right img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  animation: float 6s ease-in-out infinite;
+} /* Floating animation for the food image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  line-height: 0;
+  margin-top: -100px;
+}
+.bg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+} /* Responsive for Mobile */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 120px;
+  }
+  .left {
+    padding-right: 0;
+    margin-top: 40px;
+  }
+  .left h1 {
+    font-size: 2.5rem;
+  }
+}

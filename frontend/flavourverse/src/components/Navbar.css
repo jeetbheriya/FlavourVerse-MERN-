@@ -1,0 +1,70 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+
+  background: rgba(255, 252, 245, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+/* ===== LOGO ===== */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #1a1a1a;
+}
+
+/* ===== LINKS ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 32px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b35;
+}
+
+/* Active route */
+.nav-links a.active {
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+/* ===== LOGIN BUTTON ===== */
+.login {
+  background: linear-gradient(135deg, #2d2d2d, #000);
+  color: white;
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
